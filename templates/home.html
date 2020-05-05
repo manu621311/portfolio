@@ -1,0 +1,91 @@
+{%extends 'base.html'%}
+{%load static%}
+{%block title%}Portfolio{%endblock title%}
+{%block content%}
+<div id="loader"></div>
+<div style="position: fixed;" class="navbar" id="navbar" >
+    <a href="#personal_info" style="text-decoration: none;">Home</a>
+    <a href="#about" style="text-decoration: none;">About</a>
+    <a href="#skills" style="text-decoration: none;">Skills</a>
+    <a href="#contact" style="text-decoration: none;">Contact</a>
+</div>
+<div class="row" id="personal_info" style="margin-top: 50px;">
+    <div class="col-3" id="me_photo">
+        <img src="{%static 'images/me.jpg'%}" style="border-radius:30px;">
+    </div>
+    <div class="col-6" style="margin-top: 25px;" id="me_info">
+        <p style="text-align: justify;font-size: medium;" id="me_text">Programming has changed the world by a tremendous amount.Nowadays it is present around us almost everywhere.
+        It has also become one of the most sought after skill for this generation.Therefore this domain has attracted a lot of crowd.
+        The population of the world currently stands at 7.8 billion people and over 18.5 million of them of coders.
+        But not every one of them presents a quality coding.Only a certain portion of that soceity represents skill in the sphere.
+        The only reason for this skill gap is that major chunk of them considers coding as a means of earning.Whereas I regard coding simply..,
+        as my hobby,owing to which I am able to write it with perfection.</p>
+    </div>
+
+</div>
+<div class="row" id="about" style="background-color: tomato;border-bottom-right-radius: 120px;">
+    <h1 style="margin-left: 45%;text-decoration: underline;text-decoration-style: double;margin-bottom: 25px;">About:</h1>
+    <div class="col-2" id="about_tile_1"><img src="{%static 'images/fast.png' %}"><br>
+        <p id="feature_text">Websites are fast with lesser loading times.</p></div>
+    <div class="col-2" id="about_tile_2"><img src="{%static 'images/dynamic.png' %}" >
+        <p id="feature_text">Made dynamic through animations and ajax.</p></div>
+    <div class="col-2" id="about_tile_3"><img src="{%static 'images/responsive.png' %}">
+        <p id="feature_text">Option to apply responsiveness for every screen.</p></div>
+    <div class="col-2" id="about_tile_4"><img src="{%static 'images/scalable.png' %}">
+        <p id="feature_text">Both the front-end and back-end is scalable.</p></div>
+    <div class="col-2" id="about_tile_5"><img src="{%static 'images/functional.png' %}">
+        <p id="feature_text">The websites made functional by the use of API and Database.</p></div>
+</div>
+<div class="row" id="skills">
+    <div class="col-5">
+        <h3>Skills:</h3>
+        <div class="col-s-4"><img id="skill_icon1" src="{% static 'images/django.png'%}" ></div>
+        <div class="col-s-4"><img id="skill_icon2" src="{% static 'images/SQL.png'%}" ></div>
+        <div class="col-s-4"><img id="skill_icon3" src="{% static 'images/angularjs.png'%}" ></div>
+        <div class="col-s-4"><img id="skill_icon4" src="{% static 'images/API.jpg'%}" ></div>
+        <div class="col-s-4"><img id="skill_icon5" src="{% static 'images/XML.png'%}" ></div>
+        <div class="col-s-4"><img id="skill_icon6" src="{% static 'images/javascript.png'%}" ></div>
+        <div class="col-s-4"><img id="skill_icon7" src="{% static 'images/HTML.jpg'%}" ></div>
+        <div class="col-s-4"><img id="skill_icon8" src="{% static 'images/python.jpg'%}" ></div>
+        <div class="col-s-4"><img id="skill_icon9" src="{% static 'images/datastructure.jpg'%}" ></div>
+        <div class="col-s-4"><img id="skill_icon10" src="{% static 'images/css.jpg'%}" ></div>
+    </div>
+    <div class="col-6">
+        <h1 style="margin-bottom: 30px;">Infographic <br>on skills:</h1>
+      <h4>Django:</h4>
+      <div class="progress"><div class="progress-bar progress-bar-striped active progress-bar-danger"  style="width:80%;">80%</div></div>
+      <h4>HTML:</h4>
+      <div class="progress"><div class="progress-bar progress-bar-striped active progress-bar-danger"  style="width:75%;">75%</div></div>
+      <h4>CSS:</h4>
+      <div class="progress"><div class="progress-bar progress-bar-striped active progress-bar-danger"  style="width:80%;">80%</div></div>
+      <h4>SQL:</h4>
+      <div class="progress"><div class="progress-bar progress-bar-striped active progress-bar-danger"  style="width:40%;">40%</div></div>
+      <h4>API:</h4>
+      <div class="progress"><div class="progress-bar progress-bar-striped active progress-bar-danger"  style="width:60%;">60%</div></div>
+      <h4>Javascript:</h4>
+      <div class="progress"><div class="progress-bar progress-bar-striped active progress-bar-danger"  style="width:75%;">75%</div></div>
+      <h4>AngularJs:</h4>
+      <div class="progress"><div class="progress-bar progress-bar-striped active progress-bar-danger"  style="width:50%;">50%</div></div>
+      <h4>Python:</h4>
+      <div class="progress"><div class="progress-bar progress-bar-striped active progress-bar-danger"  style="width:75%;">75%</div></div>
+      <h4>XML:</h4>
+      <div class="progress"><div class="progress-bar progress-bar-striped active progress-bar-danger"  style="width:40%;">40%</div></div>
+      <h4>Data Structures:</h4>
+      <div class="progress"><div class="progress-bar progress-bar-striped active progress-bar-danger"  style="width:65%;">65%</div></div>
+    </div>
+</div>
+<div class="row" id="contact">
+    <div class="col-12 footer" id="footer">
+        <form method="post" action="">
+            {%csrf_token%}
+            {{form.as_p}}
+            <input type="submit" class="btn btn-primary" value="Submit" id="query">
+        </form>
+        <div class="footer_logo">
+            <a href="https://github.com/manu621311"><i class="fa fa-git-square" style="font-size:26px"></i></a>
+            <a href="https://www.linkedin.com/in/praroop-manglam-596b3a1a1/"><i class="fa fa-linkedin-square" style="font-size:26px"></i></a>
+            <a href="https://www.facebook.com/manurockmanglam"><i class="fa fa-facebook-f" style="font-size:26px"></i></a> 
+        </div>
+    </div>
+</div>
+{%endblock content%}

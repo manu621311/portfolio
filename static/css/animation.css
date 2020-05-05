@@ -1,0 +1,74 @@
+@media only screen and (min-width:768px){
+    .me_photo{
+        animation:me_photo 2s;
+        margin-left: 30px;
+        }
+    .me_info{
+        animation:me_info 3s;
+        }
+    .about_tile_1{
+        margin-left: 40px;
+        animation: about_tile_1 2s;
+    }
+    .about_tile_2{
+        margin-left: 13px;
+        animation: about_tile_2 2s;
+    }
+    .about_tile_3{
+        margin-left: 13px;
+        animation: about_tile_3 2s;
+    }
+    .about_tile_4{
+        margin-left: 13px;
+        animation: about_tile_4 2s;
+    }
+    .about_tile_5{
+        margin-left: 13px;
+        animation: about_tile_5 2s;
+    }
+    [class*="skill_icon"]{
+        animation:skill_icon 4s ;
+    }
+    .footer{
+        animation:footer 4s;
+    }
+   
+}
+
+@keyframes me_photo{
+    from{opacity:0;margin-left: 0px;}
+    to{opacity:1;margin-left:30px;}
+    }
+
+@keyframes me_info{
+    from{opacity: 0;margin-left:250px;}
+    to{opacity: 1;margin-left: 10px;}
+    }
+@keyframes about_tile_1{
+    from{opacity:0;margin-left: 0px;}
+    to{opacity: 1;margin-left: 40px;}
+}
+@keyframes about_tile_2{
+    from{opacity:0;margin-left: -100px;}
+    to{opacity: 1;margin-left: 13px;}
+}
+@keyframes about_tile_3{
+    from{opacity:0;margin-left: -220px;}
+    to{opacity: 1;margin-left: 13px;}
+}
+@keyframes about_tile_4{
+    from{opacity:0;margin-left: -320px;}
+    to{opacity: 1;margin-left: 13px;}
+}
+@keyframes about_tile_5{
+    from{opacity:0;margin-left: -420px;}
+    to{opacity: 1;margin-left: 13px;}
+}
+@keyframes skill_icon{
+    from{border: 40px solid #ff1a1a;}
+    to{border:0px;}
+}
+@keyframes footer{
+    from{background-color: white;}
+    to{background-color: #cc2900;}
+}

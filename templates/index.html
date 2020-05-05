@@ -1,0 +1,15 @@
+{%extends 'base.html'%}
+{%load static%}
+
+{%block content%}
+<div id="loader"></div>
+<div style="margin: 1px;" id="overall">
+    
+        <div style="margin: 0px;z-index:-1;" class="col-12" ><img src="{%static 'images/prism.GIF'%}" style="max-height:600px;">
+            <div class="name"><p class="name_text">Hello, I'm <span style="color:red;">Praroop</span><br>I'm a Programmer.<br>
+            <span class="entrance"><a href="{%url 'home'%}" style="text-decoration: none;color: #cc0000;">My Portfolio ></a></span></p></div>
+        </div>
+    
+</div>        
+
+{%endblock content%}
