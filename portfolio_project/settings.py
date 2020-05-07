@@ -35,12 +35,14 @@ if ENVIRONMENT=='production':
     SECURE_CONTENT_TYPE_NOSNIFF = True # new
     SESSION_COOKIE_SECURE=True
     CSRF_COOKIE_SECURE=True
+    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https') # new
+
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['.herokuapp.com','localhost','127.0.0.1']
+ALLOWED_HOSTS = ['whispering-brushlands-85580.herokuapp.com','localhost','127.0.0.1']
 
 
 # Application definition
