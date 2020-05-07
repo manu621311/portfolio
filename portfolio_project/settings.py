@@ -48,6 +48,7 @@ ALLOWED_HOSTS = ['.herokuapp.com','localhost','127.0.0.1']
 INSTALLED_APPS = [
     'portfolio.apps.PortfolioConfig',
     'crispy_forms',
+    'whitenoise.runserver_nostatic', # new 
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -59,6 +60,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware', # new 
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
