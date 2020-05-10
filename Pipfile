@@ -8,10 +8,11 @@ verify_ssl = true
 [packages]
 django = "==3.0"
 python-dotenv = "*"
-whitenoise = "==4.1"
+
 gunicorn = "==19.9.0"
 django-crispy-forms = "==1.8.1"
 django-debug-toolbar = "==2.0"
+uwsgi = "*"
 
 [requires]
 python_version = "3.7"
