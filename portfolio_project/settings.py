@@ -52,7 +52,7 @@ INSTALLED_APPS = [
     'portfolio.apps.PortfolioConfig',
     'crispy_forms',
     'debug_toolbar', # new
-    'whitenoise.runserver_nostatic', # new 
+    #'whitenoise.runserver_nostatic', # new 
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -62,21 +62,21 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    #'django.middleware.cache.UpdateCacheMiddleware', # new 
+    'django.middleware.cache.UpdateCacheMiddleware', # new 
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware', # new 
+    #'whitenoise.middleware.WhiteNoiseMiddleware', # new 
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'debug_toolbar.middleware.DebugToolbarMiddleware', # new
-    #'django.middleware.cache.FetchFromCacheMiddleware', # new
+    'django.middleware.cache.FetchFromCacheMiddleware', # new
 ]
-"""CACHE_MIDDLEWARE_ALIAS = 'default'
+CACHE_MIDDLEWARE_ALIAS = 'default'
 CACHE_MIDDLEWARE_SECONDS = 604800 
-CACHE_MIDDLEWARE_KEY_PREFIX = ''"""
+CACHE_MIDDLEWARE_KEY_PREFIX = ''
 
 
 ROOT_URLCONF = 'portfolio_project.urls'
