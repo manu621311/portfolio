@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+import socket
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -40,7 +41,7 @@ if ENVIRONMENT=='production':
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['whispering-brushlands-85580.herokuapp.com','localhost','127.0.0.1']
 
@@ -50,6 +51,7 @@ ALLOWED_HOSTS = ['whispering-brushlands-85580.herokuapp.com','localhost','127.0.
 INSTALLED_APPS = [
     'portfolio.apps.PortfolioConfig',
     'crispy_forms',
+    'debug_toolbar', # new
     'whitenoise.runserver_nostatic', # new 
     'django.contrib.admin',
     'django.contrib.auth',
@@ -60,6 +62,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'django.middleware.cache.UpdateCacheMiddleware', # new 
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware', # new 
@@ -68,6 +71,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware', # new
+    'django.middleware.cache.FetchFromCacheMiddleware', # new
 ]
 
 ROOT_URLCONF = 'portfolio_project.urls'
@@ -141,3 +146,8 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS=[os.path.join(BASE_DIR,'static')]
 CRISPY_TEMPLATE_PACK='bootstrap4'
+INTERNAL_IPS = [
+    # ...
+    '127.0.0.1',
+    # ...
+]
