@@ -74,6 +74,10 @@ MIDDLEWARE = [
     'debug_toolbar.middleware.DebugToolbarMiddleware', # new
     'django.middleware.cache.FetchFromCacheMiddleware', # new
 ]
+CACHE_MIDDLEWARE_ALIAS = 'default'
+CACHE_MIDDLEWARE_SECONDS = 604800 
+CACHE_MIDDLEWARE_KEY_PREFIX = ''
+
 
 ROOT_URLCONF = 'portfolio_project.urls'
 
