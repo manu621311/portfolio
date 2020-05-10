@@ -62,7 +62,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    'django.middleware.cache.UpdateCacheMiddleware', # new 
+    #'django.middleware.cache.UpdateCacheMiddleware', # new 
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware', # new 
@@ -72,11 +72,11 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'debug_toolbar.middleware.DebugToolbarMiddleware', # new
-    'django.middleware.cache.FetchFromCacheMiddleware', # new
+    #'django.middleware.cache.FetchFromCacheMiddleware', # new
 ]
-CACHE_MIDDLEWARE_ALIAS = 'default'
+"""CACHE_MIDDLEWARE_ALIAS = 'default'
 CACHE_MIDDLEWARE_SECONDS = 604800 
-CACHE_MIDDLEWARE_KEY_PREFIX = ''
+CACHE_MIDDLEWARE_KEY_PREFIX = ''"""
 
 
 ROOT_URLCONF = 'portfolio_project.urls'
