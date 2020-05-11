@@ -41,7 +41,7 @@ if ENVIRONMENT=='production':
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['whispering-brushlands-85580.herokuapp.com','localhost','127.0.0.1']
 
