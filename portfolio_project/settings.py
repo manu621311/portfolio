@@ -52,7 +52,7 @@ INSTALLED_APPS = [
     'portfolio.apps.PortfolioConfig',
     'crispy_forms',
     'debug_toolbar', # new
-    #'whitenoise.runserver_nostatic', # new 
+    #'whitenoise.runserver_nostatic', # new/nec 
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
