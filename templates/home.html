@@ -81,7 +81,7 @@
         <div class="col-4 footer_post">
             <form method="post" action="">
                 {%csrf_token%}
-                {{form|crispy}}
+                {{form|crispy}}<!--using crsipy forms-->
                 <input type="submit" class="btn btn-primary" value="Submit" id="query">
             </form>
         </div>
