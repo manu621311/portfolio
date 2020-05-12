@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'portfolio.apps.PortfolioConfig',
     'crispy_forms',
     'debug_toolbar', # new
-    'whitenoise.runserver_nostatic', # new/nec 
+    'whitenoise.runserver_nostatic', # new 
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -154,9 +154,9 @@ if ENVIRONMENT=='production':
     SECURE_CONTENT_TYPE_NOSNIFF = True # new
     SESSION_COOKIE_SECURE=True
     CSRF_COOKIE_SECURE=True
-    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https') # /new
+    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https') # new
 
-    
+
 import dj_database_url 
 db_from_env = dj_database_url.config(conn_max_age=500) 
 DATABASES['default'].update(db_from_env)
