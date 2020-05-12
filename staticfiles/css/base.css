@@ -88,6 +88,7 @@ img{
     #me_text{margin-left: 100px;}
     .name{margin-bottom:-260px;top:-260px;margin-left: 70%;}
     .name_text{font-size: 70px;}
+    .footer_post{margin-left: 35%;}
     
   }
   .name_text{
@@ -153,7 +154,6 @@ img{
 
 .footer{
   background-color:#cc2900;
-  text-align: center;
   border-top-right-radius: 120px;
 }
 .footer_logo {

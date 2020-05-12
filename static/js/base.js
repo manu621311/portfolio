@@ -1,5 +1,5 @@
 
-var ids1=["navbar","personal_info","about","skills","contact"];
+var ids1=["navbar","message","personal_info","about","skills","contact"];
 var ids2=["me_photo","me_info","about_tile_1","about_tile_2","about_tile_3","about_tile_4","about_tile_5","skill_icon1","skill_icon2",
 "skill_icon3","skill_icon4","skill_icon5","skill_icon6","skill_icon7","skill_icon8","skill_icon9","skill_icon10","contact"];
 var $window=$(window);
@@ -52,6 +52,10 @@ function check_if_in_view($window,$animation_elements,i) {
     }
   });
 }
+
+
+
+
 /*animation on scroll:*/
 /*function animate(){
   var i;
@@ -82,14 +86,6 @@ function add_animate(element,elementHeight) {// animate element when it is in vi
 }*/
 
 
-
-
-//for query button
-var query=document.getElementById("query");
-query.addEventListener('click',function(event){
-  event.preventDefault();
-  alert('Your message has been submitted');
-});
 
 /*function highlight(){
   var i,x;

@@ -4,6 +4,13 @@
 {%block title%}Portfolio{%endblock title%}
 {%block content%}
 <div id="loader"></div>
+<div class="col-12" id="message">
+    {% if messages %}
+        {% for message in messages %}
+        <div{% if message.tags %} class="alert alert-success"{% endif %}>{{ message }}</div>
+        {% endfor %}
+    {% endif %}
+</div>
 <div style="position: fixed;" class="navbar" id="navbar" >
     <a href="#personal_info" style="text-decoration: none;">Home</a>
     <a href="#about" style="text-decoration: none;">About</a>
@@ -75,21 +82,19 @@
       <div class="progress"><div class="progress-bar progress-bar-striped active progress-bar-danger"  style="width:65%;">65%</div></div>
     </div>
 </div>
-<div class="row footer" id="contact" >
-    <div>
-        <h3 style="text-align: center;">Leave a Message:</h3>
-        <div class="col-4 footer_post">
-            <form method="post" action="">
-                {%csrf_token%}
-                {{form|crispy}}<!--using crsipy forms-->
-                <input type="submit" class="btn btn-primary" value="Submit" id="query">
-            </form>
-        </div>
-        <div class="footer_logo col-12" style="text-align: center;">
-            <a href="https://github.com/manu621311"><i class="fa fa-git-square" style="font-size:26px"></i></a>
-            <a href="https://www.linkedin.com/in/praroop-manglam-596b3a1a1/"><i class="fa fa-linkedin-square" style="font-size:26px"></i></a>
-            <a href="https://www.facebook.com/manurockmanglam"><i class="fa fa-facebook-f" style="font-size:26px"></i></a> 
-        </div>
+<div class="row footer" id="contact">
+    <div class="col-4 footer_post" id="footer">
+        <form method="post" action="">
+            {%csrf_token%}
+            {{form|crispy}}
+            <input type="submit" class="btn btn-primary" value="Submit" id="query">
+        </form>
+    </div>
+    <div class="footer_logo col-12">
+        <a href="https://github.com/manu621311"><i class="fa fa-git-square" style="font-size:26px"></i></a>
+        <a href="https://www.linkedin.com/in/praroop-manglam-596b3a1a1/"><i class="fa fa-linkedin-square" style="font-size:26px"></i></a>
+        <a href="https://www.facebook.com/manurockmanglam"><i class="fa fa-facebook-f" style="font-size:26px"></i></a> 
     </div>
 </div>
+
 {%endblock content%}

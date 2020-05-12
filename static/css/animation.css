@@ -29,8 +29,8 @@
     [class*="skill_icon"]{
         animation:skill_icon 4s ;
     }
-    .footer{
-        animation:footer 4s;
+    .contact{
+        animation:contact 4s;
     }
    
 }
@@ -68,7 +68,7 @@
     from{border: 40px solid #ff1a1a;}
     to{border:0px;}
 }
-@keyframes footer{
+@keyframes contact{
     from{background-color: white;}
     to{background-color: #cc2900;}
 }
