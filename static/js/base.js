@@ -21,7 +21,7 @@ function showPage(){
   }
 }
 function timer(){
-    var time=setTimeout(showPage,2500);
+    var time=setTimeout(showPage,1800);
     //highlight();
     //animate();
 }
