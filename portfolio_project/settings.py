@@ -26,7 +26,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ENVIRONMENT=os.getenv('ENVIRONMENT',default='development')
 SECRET_KEY = os.getenv("SECRET_KEY")
 #production
-"""if ENVIRONMENT=='production':
+if ENVIRONMENT=='production':
     SECURE_BROWSER_XSS_FILTER=True
     X_FRAME_OPTIONS='DENY'
     SECURE_SSL_REDIRECT=True
@@ -36,7 +36,7 @@ SECRET_KEY = os.getenv("SECRET_KEY")
     SECURE_CONTENT_TYPE_NOSNIFF = True # new
     SESSION_COOKIE_SECURE=True
     CSRF_COOKIE_SECURE=True
-    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https') # new"""
+    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https') # new
 
 
 
@@ -52,7 +52,7 @@ INSTALLED_APPS = [
     'portfolio.apps.PortfolioConfig',
     'crispy_forms',
     'debug_toolbar', # new
-    #'whitenoise.runserver_nostatic', # new/nec 
+    'whitenoise.runserver_nostatic', # new/nec 
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -65,7 +65,7 @@ MIDDLEWARE = [
     'django.middleware.cache.UpdateCacheMiddleware', # new 
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    #'whitenoise.middleware.WhiteNoiseMiddleware', # new 
+    'whitenoise.middleware.WhiteNoiseMiddleware', # new 
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -156,6 +156,6 @@ INTERNAL_IPS = [
     '127.0.0.1',
     # ...
 ]
-"""import dj_database_url 
+import dj_database_url 
 db_from_env = dj_database_url.config(conn_max_age=500) 
-DATABASES['default'].update(db_from_env)"""
+DATABASES['default'].update(db_from_env)

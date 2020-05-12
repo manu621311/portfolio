@@ -55,7 +55,7 @@ img{
     margin-top:28%;
     z-index:1;
   }
-  #overall,#navbar,#personal_info,#about,#skills,#contact{
+  #overall,#navbar,#personal_info,#about,#skills,#contact,#message{
     display: none;
   }
   /*animation section------------------------------------------------------------------------------*/
@@ -89,6 +89,10 @@ img{
     .name{margin-bottom:-260px;top:-260px;margin-left: 70%;}
     .name_text{font-size: 70px;}
     .footer_post{margin-left: 35%;}
+    .footer{
+      background-color:#cc2900;
+      border-top-right-radius: 120px;
+    }
     
   }
   .name_text{
@@ -154,9 +158,9 @@ img{
 
 .footer{
   background-color:#cc2900;
-  border-top-right-radius: 120px;
 }
 .footer_logo {
+  text-align: center;
   margin-top: 20px;
 }
 .footer_logo a{
