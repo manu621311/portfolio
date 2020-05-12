@@ -25,18 +25,6 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 ENVIRONMENT=os.getenv('ENVIRONMENT',default='development')
 SECRET_KEY = os.getenv("SECRET_KEY")
-#production
-if ENVIRONMENT=='production':
-    SECURE_BROWSER_XSS_FILTER=True
-    X_FRAME_OPTIONS='DENY'
-    SECURE_SSL_REDIRECT=True
-    SECURE_HSTS_SECONDS = 3600 # new 
-    SECURE_HSTS_INCLUDE_SUBDOMAINS = True # new 
-    SECURE_HSTS_PRELOAD = True # new 
-    SECURE_CONTENT_TYPE_NOSNIFF = True # new
-    SESSION_COOKIE_SECURE=True
-    CSRF_COOKIE_SECURE=True
-    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https') # /new
 
 
 
@@ -156,6 +144,19 @@ INTERNAL_IPS = [
     '127.0.0.1',
     # ...
 ]
+if ENVIRONMENT=='production':
+    SECURE_BROWSER_XSS_FILTER=True
+    X_FRAME_OPTIONS='DENY'
+    SECURE_SSL_REDIRECT=True
+    SECURE_HSTS_SECONDS = 3600 # new 
+    SECURE_HSTS_INCLUDE_SUBDOMAINS = True # new 
+    SECURE_HSTS_PRELOAD = True # new 
+    SECURE_CONTENT_TYPE_NOSNIFF = True # new
+    SESSION_COOKIE_SECURE=True
+    CSRF_COOKIE_SECURE=True
+    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https') # /new
+
+    
 import dj_database_url 
 db_from_env = dj_database_url.config(conn_max_age=500) 
 DATABASES['default'].update(db_from_env)
