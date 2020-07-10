@@ -1,7 +1,7 @@
 
 var ids1=["navbar","message","personal_info","about","skills","contact"];
 var ids2=["me_photo","me_info","about_tile_1","about_tile_2","about_tile_3","about_tile_4","about_tile_5","skill_icon1","skill_icon2",
-"skill_icon3","skill_icon4","skill_icon5","skill_icon6","skill_icon7","skill_icon8","skill_icon9","skill_icon10","contact"];
+"skill_icon3","skill_icon4","skill_icon5","skill_icon6","skill_icon7","skill_icon8","skill_icon9","skill_icon10","skill_icon11","skill_icon12","skill_icon13","contact"];
 var $window=$(window);
 $window.on('scroll', every_element);
 $window.on('scroll resize', every_element);

@@ -1,10 +1,15 @@
 body{
   margin: 0px;
+  height:100%;
 }
 html{
   scroll-behavior: smooth;
+  height:100%;
 }
-*{box-sizing:border-box;}
+
+*{box-sizing:border-box;
+
+}
 .row::after{
     content:"";
     clear:both;
@@ -21,6 +26,9 @@ html{
   padding:15px;
   margin-left:10px;/*for mobiles*/
   width:30%;
+}
+.row,[class*="col-"]{
+  margin:0
 }
 @media only screen and (min-width:768px){
     /*for desktop*/
@@ -51,8 +59,8 @@ img{
     border-radius:20px;
     box-shadow:0 0 28px grey;
     position: relative;
-    margin-left: 37%;
-    margin-top:28%;
+    left: 45%;
+    top:41%;
     z-index:1;
   }
   #overall,#navbar,#personal_info,#about,#skills,#contact,#message{
@@ -64,42 +72,28 @@ img{
     50%{transform: rotate(180deg);border-top: 20px solid #cc2900;border-bottom: 20px solid #cc2900; }
     100% { transform: rotate(360deg);border-top: 20px solid #801a00;border-bottom: 20px solid #801a00; }
   }
-  @media only screen and (min-width:600px){
-      #loader{margin-top:18%;margin-left:45%}
-  }
-  /*#overall{
-    position:realtive;
-    animation-name: animateoverall;
-    animation-duration:1s;
-  }
-  @keyframes animateoverall{
-      from{bottom:-100px;opacity:0}
-      to{bottom:0;opacity:1}
-  }*/
-  
   .name{
     position:relative;
-    top:-220px;
-    margin-left:50%;
-    margin-bottom:-220px;
+    top:67%;
+    margin-left:40%; 
     z-index:1;
+  }
+  .name_text{
+    font-weight: bold;
+    font-family: 'Raleway';
+    font-size: 20px;
+    color: white;
   }
   @media only screen and (min-width:768px){
     #me_text{margin-left: 100px;}
-    .name{margin-bottom:-260px;top:-260px;margin-left: 70%;}
-    .name_text{font-size: 70px;}
+    .name{top:63%;margin-left: 75%;}
+    .name_text{font-size: 30px;}
     .footer_post{margin-left: 35%;}
     .footer{
       background-color:#cc2900;
       border-top-right-radius: 120px;
     }
     
-  }
-  .name_text{
-    font-weight: bold;
-    font-family: 'Raleway';
-    font-size: 30px;
-    color: white;
   }
   .entrance{
     border:3px solid white;
@@ -126,7 +120,7 @@ img{
     padding: 14px 16px;
     text-decoration: none;
     font-weight: bold;
-    shadow:165px 15px  white;
+    
     font-size: large;
   }
   .navbar a:hover {
@@ -155,7 +149,12 @@ img{
 [id*="skill_icon"]{
   border-radius: 50%;
 }
-
+.about{
+  margin-left: 45%;
+  text-decoration: underline;
+  text-decoration-style: double;
+  margin-bottom: 25px;
+}
 .footer{
   background-color:#cc2900;
 }
@@ -165,4 +164,23 @@ img{
 }
 .footer_logo a{
   text-decoration: none;
+}
+.home_pic{
+  background-image: url("../images/prism.gif");
+  height:100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media only screen and (max-width:600px){
+  .row{
+    margin-right: 0;
+    margin-left: 0;
+  }
+  
+  #me_text{margin:2px 13px 40px 13px;}
+  
+  .feature_text_last{margin-right:30px;}
+  #loader{top: 40%;left:35%;}
+ .about{margin-left: 38%;} 
 }
